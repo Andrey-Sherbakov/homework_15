@@ -21,7 +21,7 @@ int main()
         }
     }
     //Функция вывода четных или нечетных чисел в зависимости от параметра
-    std::cout << "\nЕсли хотите вывести четные числа напишите even, если нечетные - odd: ";
+    std::cout << "\n\nЕсли хотите вывести четные числа напишите even, если нечетные - odd: ";
     std::string name;
     std::cin >> name;
     std::string chet = "even", nechet = "odd";
@@ -47,5 +47,6 @@ int main()
             }
         }
     }
+    std::cout << "\n";
     return 0;
 }
