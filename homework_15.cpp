@@ -8,28 +8,20 @@ const int N = 10;
 void algoritm(std::string name)
 {
     int N = 50;
-    std::string even = "even", odd = "odd";
+    bool x;
+    std::string even = "even";
     if (name == even)
     {
-        std::cout << "Четные числа: ";
-        for (int i = 0; i <= N; i++)
-        {
-            if (i % 2 == 0)
-            {
-                std::cout << i << " ";
-            }
-        }
+       x = 0;
     }
-    else if (name == odd)
+    else 
     {
-        std::cout << "Нечетные числа: ";
-        for (int i = 0; i <= N; i++)
-        {
-            if (i % 2 != 0)
-            {
-                std::cout << i << " ";
-            }
-        }
+       x = 1;
+    }
+
+    for (int i = x; i <= N; i += 2)
+    {
+       std::cout << i << " ";
     }
     std::cout << "\n";
 }
@@ -39,15 +31,12 @@ int main()
     setlocale(0, "");
     //Вывод только четных чисел
     std::cout << "Четные числа: ";
-    for (int i = 0; i <= N; i++)
+    for (int i = 0; i <= N; i+=2)
     {
-        if (i % 2 == 0)
-        {
-            std::cout << i << " ";
-        }
+        std::cout << i << " ";
     }
 
-    std::cout << "\n\nЕсли хотите вывести четные числа то введите even, если нечетные то - odd: ";
+    std::cout << "\n\nЕсли хотите вывести четные числа то введите even, если нечетные то odd: ";
     std::string a;
     std::cin >> a;
     algoritm(a);
