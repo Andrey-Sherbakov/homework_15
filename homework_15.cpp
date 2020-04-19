@@ -10,14 +10,8 @@ void algoritm(std::string name)
     int N = 50;
     bool x;
     std::string even = "even";
-    if (name == even)
-    {
-       x = 0;
-    }
-    else 
-    {
-       x = 1;
-    }
+    if (name == even) { x = 0; }
+    else { x = 1; }
 
     for (int i = x; i <= N; i += 2)
     {
