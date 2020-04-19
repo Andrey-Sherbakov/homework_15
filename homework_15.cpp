@@ -2,33 +2,17 @@
 #include <iostream>
 #include <string>
 
-int main()
+const int N = 10;
+
+//Функция вывода четных или нечетных чисел в зависимости от параметра
+void algoritm(std::string name)
 {
-    setlocale(0, "");
-    int a = 10;
-    std::cout << "Все числа: ";
-    for (int i = 0; i <= a; i++)
-    {
-        std::cout << i << " ";
-    }
-    //Функция вывода только четных чисел
-    std::cout << "\nЧетные числа: ";
-    for (int i = 0; i<=a; i++)
-    {
-        if (i % 2 == 0)
-        {
-            std::cout << i << " ";
-        }
-    }
-    //Функция вывода четных или нечетных чисел в зависимости от параметра
-    std::cout << "\n\nЕсли хотите вывести четные числа напишите even, если нечетные - odd: ";
-    std::string name;
-    std::cin >> name;
-    std::string chet = "even", nechet = "odd";
-    if (name == chet)
+    int N = 50;
+    std::string even = "even", odd = "odd";
+    if (name == even)
     {
         std::cout << "Четные числа: ";
-        for (int i = 0; i <= a; i++)
+        for (int i = 0; i <= N; i++)
         {
             if (i % 2 == 0)
             {
@@ -36,10 +20,10 @@ int main()
             }
         }
     }
-    else if (name == nechet)
+    else if (name == odd)
     {
         std::cout << "Нечетные числа: ";
-        for (int i = 0; i <= a; i++)
+        for (int i = 0; i <= N; i++)
         {
             if (i % 2 != 0)
             {
@@ -48,5 +32,25 @@ int main()
         }
     }
     std::cout << "\n";
+}
+
+int main()
+{
+    setlocale(0, "");
+    //Вывод только четных чисел
+    std::cout << "Четные числа: ";
+    for (int i = 0; i <= N; i++)
+    {
+        if (i % 2 == 0)
+        {
+            std::cout << i << " ";
+        }
+    }
+
+    std::cout << "\n\nЕсли хотите вывести четные числа то введите even, если нечетные то - odd: ";
+    std::string a;
+    std::cin >> a;
+    algoritm(a);
+
     return 0;
 }
